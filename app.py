@@ -11,7 +11,6 @@ menu = [
     {"id": 3, "name": "Black Label", "price": 5.0},
 ]
 
-
 # Empty list to store orders
 orders = []
 
@@ -42,7 +41,6 @@ def get_bill(order_id):
     if order:
         return jsonify({"order_id": order_id, "total_price": order["price"]})
     return jsonify({"error": "Order not found"}), 404
-
 
 @app.errorhandler(404)
 def not_found(e):
